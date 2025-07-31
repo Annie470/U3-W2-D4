@@ -44,7 +44,7 @@ const CommentArea =(props)=> {
         {isError && (
           <Alert variant="danger">Errore nel caricamento dei commenti</Alert>
         )}
-       
+       <h6 className="text-center mb-0">Commenta:</h6>
             <AddComment id={props.bookId} setForUp={setForUp} />
              <h6 className="text-center mt-1">Recensioni:</h6>
             <CommentList comments={comments} setForUp={setForUp} forUp={forUp}/>

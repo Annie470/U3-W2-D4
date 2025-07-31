@@ -53,7 +53,7 @@ const AddComment =(props)=> {
 
     return (
       <>
-        <h6 className="text-center mb-0">Commenta:</h6>
+        
         <Form onSubmit={postComm} className="text-end p-3">
           <Form.Group controlId="commentAdd" className="mb-2">
             <Form.Control
