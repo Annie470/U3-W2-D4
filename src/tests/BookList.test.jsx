@@ -18,5 +18,13 @@ describe('test initial mounting', () => {
     expect(filteredCards).toHaveLength(1)
     expect(screen.getByText(/pandemic/i)).toBeInTheDocument()
   })
+  it('Loads comments in DOM after clicking on a book', async () => {
+    render(<BookList arrayBook={scifiBooks} />)
+    //prova con find
+    const arrayBook = await screen.findAllByTestId('cardBook')
+    fireEvent.click(arrayBook[0])
+    const recensioni = await screen.findByText(/recensioni:/i)
+    expect(recensioni).toBeInTheDocument()
+  })
 
 })
